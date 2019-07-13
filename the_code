@@ -1,0 +1,29 @@
+  def mersenne_number(p):
+        for i in range(0,len(p)):
+            p[i] = (2**p[i])-1
+        return p
+    
+    
+    def is_prime(number):
+        if number <= 1:
+            return False
+        
+        for factor in range(2, number):
+            if number % factor == 0:
+                return False
+            
+        return True
+    
+    another_list = []
+    
+    def print_primes():
+        for number in range(3, 65):
+            if is_prime(number):
+                another_list.append(number)
+    
+    print_primes()
+    print(another_list)
+    
+    mersennes = []
+    mersennes=mersenne_number(another_list)
+    print(mersennes)
